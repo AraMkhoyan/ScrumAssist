@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<!--    loads necessary files-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -9,11 +10,11 @@
 
 <body onload="NextQuestion(0)">
     <main>
-        creating a modal for when quiz ends
+        
         <div class="modal-container" id="score-modal">
 
             <div class="modal-content-container">
-
+<!--                Recomendations display text-->
                 <h1> Thanks for completing the Survey! </h1>
                 <h1> Here are recommendations for each Scrum Event for you. </h1>
 
@@ -36,6 +37,7 @@
         <div class="game-quiz-container">
 
             <div class="game-details-container">
+<!--                main page for all questions and options-->
                 <h1>Scrum Assist</h1>
                 <h1> Question : <span id="question-number"></span> / 21</h1>
             </div>
@@ -48,6 +50,7 @@
 
                 <div class="modal-container" id="option-modal">
 
+<!--                    Warning in case nothing is selected-->
                     <div class="modal-content-container">
                         <h1>Please Pick An Option</h1>
 

@@ -1,3 +1,5 @@
+// Inserting all the questions as a dictionary
+
 const questions = [
     {
         question: "What is the size of your team?",
@@ -171,7 +173,7 @@ const questions = [
     },
         
     {
-        question: "How well prepared members are for Daily Scrum",
+        question: "How well prepared members are for Daily Scrum?",
         optionA: "Very Low",
         optionB: "Low",
         optionC: "Normal",
@@ -181,7 +183,7 @@ const questions = [
     },
         
     {
-        question: "How well prepared members are for Sprint Planning",
+        question: "How well prepared members are for Sprint Planning?",
         optionA: "Very Low",
         optionB: "Low",
         optionC: "Normal",
@@ -191,7 +193,7 @@ const questions = [
     },
         
     {
-        question: "How well prepared members are for Sprint Review",
+        question: "How well prepared members are for Sprint Review?",
         optionA: "Very Low",
         optionB: "Low",
         optionC: "Normal",
@@ -201,7 +203,7 @@ const questions = [
     },
         
     {
-        question: "How well prepared members are for Retrospective",
+        question: "How well prepared members are for Retrospective?",
         optionA: "Very Low",
         optionB: "Low",
         optionC: "Normal",
@@ -232,9 +234,9 @@ function NextQuestion(index) {
 }
 
 
+// function that checks for validity and registers the answer
 function checkForAnswer() {
     const currentQuestion = questions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
     const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
     let correctOption = null
 
@@ -251,8 +253,9 @@ function checkForAnswer() {
     }
     
 
+    // checking which option user selected and adding it to a dictionary
+    // for a corresponding question
     if (options[0].checked === true) {
-        //alert(document.getElementById("option-one-label").innerHTML)
         dict[questionNumber] = document.getElementById("option-one-label").innerHTML
         indexNumber++
         //set to delay question number till when next question loads
@@ -347,12 +350,15 @@ function handleEndGame() {
     let the_sprint = ""
     let sprint_review = ""
     let retrospective = ""
-    let text = "Click Here!"
     let values = []
+    
     for (var key in dict) {
         var value = dict[key]
         values.push(value)
+        // getting all the answers user selected
+
         
+        // Logical check and recomendations for Daily Scrum
         if(values[0]=="4-6 people" || values[0]=="Less than 4 people"){
             daily_scrum = "15-30 minute meetings every other day";
         } else if(values[0]=="7-10 people"){
@@ -368,8 +374,8 @@ function handleEndGame() {
         }
         
         
-        
-        if( (values[0]=="4-6 people" || values[0]=="Less than 4 people") && (values[5]=="Never, after writing" || values[5]== "In a constant time (e.g., once a week)" || values[5] =="As needed (no structure in place)") && (values[6]=="Once a Sprint during Planning" || values[6]== "Once a Sprint before Planning") && (values[11]=="Less than 2 hours" || values[8]== "2-4 hours" || values[8] == "5-6 hours" || values[8] =="None") && (values[11]=="Moderate (4-8 months)" || values[11]=="Long term (8-12 months)" || values[11]=="Indefinite") && (values[7]=="As needed" || values[4]=="Once new project is assigned" || values[4]=="In a constant time (e.g., once a week)") && (values[1]=="Underperforming (most of the time tasks are left unfinished)" || values[1]=="Low performance" || values[1]=="Varied a lot from Sprint to Sprint") && (values[18]=="Very Low" || values[18]=="Low" || values[18]=="None" || values[18]=="Normal")){
+        // Logical check and recomendations for Sprint Planning
+        if( (values[0]=="4-6 people" || values[0]=="Less than 4 people") && (values[5]=="Never, after writing" || values[5]== "In a constant time (e.g., once a week)" || values[5] =="As needed (no structure in place)") && (values[6]=="Once a Sprint during Planning" || values[6]== "Once a Sprint before Planning") && (values[8]=="Less than 2 hours" || values[8]== "2-4 hours" || values[8] == "5-6 hours" || values[8] =="None") && (values[11]=="Moderate (4-8 months)" || values[11]=="Long term (8-12 months)" || values[11]=="Indefinite") && (values[4]=="As needed" || values[4]=="Once new project is assigned" || values[4]=="In a constant time (e.g., once a week)") && (values[1]=="Underperforming (most of the time tasks are left unfinished)" || values[1]=="Low performance" || values[1]=="Varied a lot from Sprint to Sprint") && (values[18]=="Very Low" || values[18]=="Low" || values[18]=="None" || values[18]=="Normal")){
             sprint_planning = "Keep it under 6 hours. Consider asking for more preparation and increase time schedule another call next day if time exceeds 8 hours.";
         } else if( (values[0]=="7-10 people" || values[0]=="More than 10 people") && (values[5]=="Never, after writing" || values[5]== "In a constant time (e.g., once a week)" || values[5] =="As needed (no structure in place)") && (values[6]=="Once a Sprint during Planning" || values[6]== "Once a Sprint before Planning") && (values[8]=="7-8 hours" || values[8]== "More than 8 hours" || values[8] =="None") && (values[11]=="Moderate (4-8 months)" || values[11]=="Long term (8-12 months)" || values[11]=="Indefinite") && (values[4]=="As needed" || values[4]=="Once new project is assigned" || values[4]=="In a constant time (e.g., once a week)") && (values[1]=="Underperforming (most of the time tasks are left unfinished)" || values[1]=="Low performance" || values[1]=="Varied a lot from Sprint to Sprint") && (values[18]=="Very Low" || values[18]=="Low" || values[18]=="None" || values[18]=="Normal")){
             sprint_planning = "Keep it under 8 hours. Consider asking for more preparation and increase time to schedule another call the next day if time exceeds 8 hours.";
@@ -378,8 +384,8 @@ function handleEndGame() {
         }
         
         
-        
-        if( (values[12]=="A lot (almost all story tickets)" || values[13]=="A lot (almost all story tickets)") && (values[11]=="Moderate (4-8 months)" || values[11]=="Short term (1-4 months)" || values[11]=="Small daily deliverable projects") && (values[9] != "4 weeks" && values[9] != "More than 4 weeks") &&  (values[4] != "Regularly (a lot)") && (values[5] != "In every grooming session before Stroy Points are estimated" && values[5] != "Before every grooming session before Story Points are estimated") && (values[6] == "Once a Sprint before Planning" || values[6] == "Once a Sprint during Planning")){
+        // Logical check and recomendations for The Sprint
+        if( (values[12]=="A lot (almost all story tickets)" || values[13]=="A lot (almost all story tickets)") && (values[11]=="Moderate (4-8 months)" || values[11]=="Short term (1-4 months)" || values[11]=="Small daily deliverable projects") && (values[9] != "4 weeks" && values[9] != "More than 4 weeks") &&  (values[4] != "Regularly (a lot)") && (values[5] != "In every grooming session before Story Points are estimated" && values[5] != "Before every grooming session before Story Points are estimated") && (values[6] == "Once a Sprint before Planning" || values[6] == "Once a Sprint during Planning")){
             the_sprint = "1-week Sprints are good option for you";
         } else if( (values[12]!="A lot (almost all story tickets)" || values[13]!="A lot (almost all story tickets)") && (values[11]!="Moderate (4-8 months)" && values[11]!="Short term (1-4 months)" || values[11]!="Small daily deliverable projects") && (values[9] == "4 weeks" || values[9] == "More than 4 weeks") &&  (values[4] == "Regularly (a lot)") && (values[5] == "In every grooming session before Stroy Points are estimated" || values[5] == "Before every grooming session before Story Points are estimated") && (values[6] != "Once a Sprint before Planning" || values[6] != "Once a Sprint during Planning") ){
             the_sprint = "3 or 4-week Sprints are good option for you.";
@@ -387,7 +393,7 @@ function handleEndGame() {
             the_sprint = "2-week Sprints are good option for you";
         }
       
-            
+        // Logical check and recomendations for Sprint Review     
         if((values[0]=="Less than 4 people" || values[0]=="4-6 people") && (values[1]!="Underperforming (most of the time tasks are left unfinished)" && values[1]!="Low performance") && values[10]=="30 minutes" && (values[11]=="Small daily deliverable projects" || values[11]=="Short term (1-4 months)") && values[12]!="Low (almost never)" && values[13]!="Low (almost never)" && (values[19]=="Low" || values[19]=="Very Low")){
             sprint_review = "Sprint Reviews are not effective, you can skip them.";
         } else if(values[14]=="Yes" && (values[10]=="60 minutes" || values[10]=="90 minutes" || values[10]=="120 minutes" ) && values[19]=="Normal" && (values[4]=="As needed" || values[4]=="In a constant time (e.g., once a week)" || values[4]=="Regularly (a lot)") && (values[5]!="Never, after writing" && values[5]!="As needed (no structure in place)") && (values[2]=="Regular collaboration happening between all" || values[2]=="High collaboration between SOME members" || values[2]=="Average collaboration (when needed)")){
@@ -398,7 +404,7 @@ function handleEndGame() {
             sprint_review = "Keep what you are doing!";
         }
       
-    
+        // Logical check and recomendations for Retrospective 
         if((values[20]=="Very Low" || values[20]=="Low" || values[20]=="Normal") && values[12]=="Low (almost never)" && values[13] =="Low (almost never)" && (values[11]=="Small daily deliverable projects" || values[11]=="Short term (1-4 months)" || values[11]=="Moderate (4-8 months)") && vales[5]!=="Never" && (values[1]=="Overperforming (do more than expected)" || values[1]=="High Performance" || values[1]=="Expected performance (exactly what they commit to)")  ){
             retrospective = "Retrospectives are NOT Necessary";
         } else {
@@ -412,7 +418,7 @@ function handleEndGame() {
         
     }
     
-    //data to display to score board
+    //data to display to recomendations board
     document.getElementById('score-modal').style.display = "flex"
     document.getElementById('daily-scrum').innerHTML = daily_scrum
     document.getElementById('sprint-planning').innerHTML = sprint_planning
@@ -422,7 +428,7 @@ function handleEndGame() {
 }
 
 
-//closes score modal and resets game
+//closes score modal and resets survey
 function closeScoreModal() {
     questionNumber = 1
     indexNumber = 0
@@ -434,5 +440,3 @@ function closeScoreModal() {
 function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
 }
-
-//test-comment
