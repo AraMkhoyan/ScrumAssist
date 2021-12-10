@@ -434,3 +434,5 @@ function closeScoreModal() {
 function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
 }
+
+//test-comment
