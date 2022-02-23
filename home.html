@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <!--    loads necessary files-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<title> Scrum Assist</title>
+
+<body onload="NextQuestion(0)">
+    <main>
+
+        <div class="modal-container" id="score-modal">
+
+            <div class="modal-content-container">
+                <!--                Recomendations display text-->
+                <h1> Thanks for completing the Survey! </h1>
+                <h1> Here are recommendations for each Scrum Event for you. </h1>
+
+                <div class="grade-details">
+                    <p>Daily Scrum : <span id="daily-scrum"></span></p>
+                    <p>Sprint Planning : <span id="sprint-planning"></span></p>
+                    <p>The Sprint : <span id="the-sprint"></span></p>
+                    <p>Sprint Review : <span id="sprint-review"></span></p>
+                    <p>Retrospective : <span id="retrospective"></span></p>
+                    <p><span id="remarks"></span></p>
+                </div>
+
+                <div class="modal-button-container">
+                    <button onclick="closeScoreModal()">Continue</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <!--                main page for all questions and options-->
+                <h1>Scrum Assist</h1>
+                <h1> Question : <span id="question-number"></span> / 21</h1>
+            </div>
+
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+                <div class="modal-container" id="option-modal">
+
+                    <!--                    Warning in case nothing is selected-->
+                    <div class="modal-content-container">
+                        <h1>Please Pick An Option</h1>
+
+                        <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-five" name="option" class="radio" value="optionD" />
+                    <label for="option-five" class="option" id="option-five-label"></label>
+                </span>
+
+                <span>
+                    <input type="radio" id="option-six" name="option" class="radio" value="optionD" />
+                    <label for="option-six" class="option" id="option-six-label"></label>
+                </span>
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+        <div class="back-to-home">
+            <button onclick="window.location.href='index.html'">Back To Home</button>
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -240,12 +240,6 @@ function checkForAnswer() {
     const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
     let correctOption = null
 
-    options.forEach((option) => {
-        if (option.value === currentQuestionAnswer) {
-            //get's correct's radio input with correct answer
-            correctOption = option.labels[0].id
-        }
-    })
 
     //checking to make sure a radio input has been checked or an option being chosen
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false && options[4].checked == false && options[5].checked == false ) {
@@ -360,17 +354,17 @@ function handleEndGame() {
         
         // Logical check and recomendations for Daily Scrum
         if(values[0]=="4-6 people" || values[0]=="Less than 4 people"){
-            daily_scrum = "15-30 minute meetings every other day";
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum1.html" target="_blank">Click here!</a>';
         } else if(values[0]=="7-10 people"){
-            daily_scrum = "15-30 minute meeting every day. Can be skipped once in a while.";
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum2.html" target="_blank">Click here!</a>';
         } else if(values[0]=="More than 10 people"){
-            daily_scrum = "Split into two groups and have 15 minute meeting for each team";
-        }else if(values[7]=="None"){
-            daily_scrum = "Run only in emergency cases";
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum3.html" target="_blank">Click here!</a>';    
+        }else if(values[7]=="None" && (values[1]=="Expected performance (exactly what they commit to)" || values[1]=="Overperforming (do more than expected)" || values[1]=="Expected performance (exactly what they commit to)" )){
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum4.html" target="_blank">Click here!</a>';
         } else if((values[1]=="High Performance" || values[1]=="Overperforming (do more than expected)") && (values[2]=="Regular collaboration happening between all" || values[2]=="High collaboration between SOME members") && values[3] == "Yes" && (values[17]=="Very Low" || values[17]=="Low" || values[17]=="None" || values[17]=="Normal") ){
-            daily_scrum = "Mostly skip the meetings - they seem to be not effective for your team";
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum5.html" target="_blank">Click here!</a>';
         } else {
-            daily_scrum = "Keep whatever you are doing!";
+            document.getElementById('daily-scrum').innerHTML = 'Keep What you are doing!';
         }
         
         
@@ -420,7 +414,7 @@ function handleEndGame() {
     
     //data to display to recomendations board
     document.getElementById('score-modal').style.display = "flex"
-    document.getElementById('daily-scrum').innerHTML = daily_scrum
+    //document.getElementById('daily-scrum').innerHTML = daily_scrum
     document.getElementById('sprint-planning').innerHTML = sprint_planning
     document.getElementById('the-sprint').innerHTML = the_sprint
     document.getElementById('sprint-review').innerHTML = sprint_review
