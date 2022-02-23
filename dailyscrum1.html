@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Scrum Assist</title>
+    <title>Daily Scrum Suggestions</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -76,83 +76,58 @@
 </head>
 
 <body>
-
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="#home" class="w3-bar-item w3-button">HOME</a>
-            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-                <i class="fa fa-search"></i>
-            </a>
-        </div>
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-        </div>
-    </div>
-
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <a href="home.html">
-                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">TRY SCRUM ASSIST </span> </a>
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Daily Scrum Suggestions </span>
         </div>
     </div>
 
     <!-- Container (About Section) -->
     <div class="w3-content w3-container w3-padding-64" id="about">
-        <h3 class="w3-center">About Scrum Assist</h3>
-        <p class="w3-center"><em>Scrum Assist helps you make your team productive!</em></p>
-        <p class="w3-center"><em> Based on conducted research, we created a list of 10 factors that influence how the team should be using Scrum. Multiple of those factors are considered for recommendations for different Scrum Events. To assess how the team falls under each factor, we formulated 21 multiple-choice questions. The questions and responses lead to specific recommendations that we suggest for each Scrum Event. Finally, we automated this process by creating a web app ScrumAssist that asks those 21 questions and based on the proposed logic, returns specific recommendations for each Scrum Event. </p>
+        <h3 class="w3-center"> Recommendations </h3>
+        <p class="w3-center"><em>We suggest that you hold Daily Scrum meetings for 15 minutes every other day, mainly due to your small team size. Here is more information about Daily Scrum and how you should utilize it. </em></p>
+
+        <ul class="w3-content">
+            <li>Should be used for group 4-6 - 15 mins every second day (Diebold, Ostberg, Wagner, & Zendler, 2015)
+            </li>
+            <li>Sometimes when people are confused about what to work on for that day, you can have a Daily Scrum even if it was not scheduled (Kniberg, 2015)
+            </li>
+            <li>
+                If you think that the team is well aware of their daily tasks and there is no need for quick collaboration, Daily Scrum can be skipped (Prokpets, n.d.)
+            </li>
+            <li>If a Scrum team has been together for several months, or even years, they may be tempted to do away with the Daily Scrum. One argument you may hear is “we already talk all day long, so we don’t need this meeting” (Lai, n.d.).
+            </li>
+            <li>
+                If a team sits right next to each other and collaborates very effectively, the team members likely talk to one another frequently. In this case, the Daily Scrum may be perceived as an administrative event that adds little value (Lai, n.d., Bindlish, 2016).
+            </li>
+
+            <li>Keep in mind that Daily Scrum is not effective for two teams (not revealed in the study) because… (Mortada, Ayas, & Hebig, 2020)
+                <ul>
+                    <li>Not all key questions according to Scrum Guide are addressed</li>
+                    <li>Not all team members contribute </li>
+                    <li>Daily scrum events take longer than 15 minutes</li>
+                    <li>No fixed time for the daily scrum event</li>
+                </ul>
+            </li>
+            <li>Also, here are some recommendations according to Scrum Guide to keep in mind while having your Daily Scrum Meetings
+                <ul>
+                    <li>The Scrum Master should allocate at least 2 minutes to each developer to answer to 3 main questions highlighted on the Scrum Guide
+                    </li>
+                    <li>The Daily Scrum should be the first thing every morning the developer team does, as their work during the day will depend on what was discussed in the Daily Scrum meeting
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
         <div class="w3-row">
         </div>
-        <p class="w3-xlarge w3-center w3-padding-16">Scrum Assist is effective for:</p>
-        <p class="w3-large"><i class="fa fa-laptop"></i> Start-ups</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:60%">60%</div>
-        </div>
-        <p class="w3-large"><i class="fa fa-book"></i> Small and Medium Enterprises </p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-        </div>
-        <p class="w3-large"><i class="fa fa-building"></i> Large Companies</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-        </div>
+
     </div>
-
-    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">20+</span><br>
-            Question
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">14+</span><br>
-            Unique Recommendations
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">66+</span><br>
-            Trusted Resources
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">5+</span><br>
-            Iterations
-        </div>
-    </div>
-
-
     <!-- Container (Contact Section) -->
     <div class="w3-content w3-container w3-padding-64" id="contact">
         <h3 class="w3-center">Contacts</h3>
         <p class="w3-center"><em>We'd love your feedback!</em></p>
-
         <div class="w3-col m8 w3-panel">
             <div class="w3-large w3-margin-bottom">
                 <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Minerva Univerity, San Francisco, CA<br>
@@ -164,7 +139,7 @@
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <a href="index.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Back to Home</a>
         <p>Ara Mkhoyan - Minerva University</p>
     </footer>
 
