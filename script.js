@@ -358,8 +358,8 @@ function handleEndGame() {
         } else if(values[0]=="7-10 people"){
             daily_scrum = "15-30 minute meeting every day. Can be skipped once in a while.";
         } else if(values[0]=="More than 10 people"){
-            daily_scrum = "Split into two groups and have 15 minute meeting for each team";
-        }else if(values[7]=="None"){
+            daily_scrum = "Split into two groups and have 15 minute meeting for each team";    
+        }else if(values[7]=="None" && (values[1]=="Expected performance (exactly what they commit to)" || values[1]=="Overperforming (do more than expected)" || values[1]=="Expected performance (exactly what they commit to)" )){
             daily_scrum = "Run only in emergency cases";
         } else if((values[1]=="High Performance" || values[1]=="Overperforming (do more than expected)") && (values[2]=="Regular collaboration happening between all" || values[2]=="High collaboration between SOME members") && values[3] == "Yes" && (values[17]=="Very Low" || values[17]=="Low" || values[17]=="None" || values[17]=="Normal") ){
             daily_scrum = "Mostly skip the meetings - they seem to be not effective for your team";

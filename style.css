@@ -212,6 +212,23 @@ input[type=radio]:checked ~ .option {
     background-color: rgb(83, 82, 82);
 }
 
+.back-to-home button {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 30%;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    font-weight: 600;
+    border: 2px solid gray;
+    cursor: pointer;
+    outline: none;
+}
+
+.back-to-home button:hover {
+    background-color: rgb(143, 93, 93);
+}
+
 @media(min-width : 300px) and (max-width : 350px) {
     .game-quiz-container {
         width: 90%;
