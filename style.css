@@ -23,7 +23,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: black;
-    background: url('../assets/background_image.jpg');
+    background: url('https://freedesignfile.com/upload/2017/01/Light-blue-tech-background-vector-04.jpg');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,6 +96,7 @@ span label {
     transition: transform 0.3s;
     font-weight: 600;
     color: rgb(22, 22, 22);
+    font-size: 80%;
 }
 
 span label:hover {
@@ -136,6 +137,7 @@ input[type=radio]:checked ~ .option {
 
 .next-button-container button:hover {
     background-color: rgb(143, 93, 93);
+    color: white;
 }
 
 .modal-container {
@@ -218,7 +220,7 @@ input[type=radio]:checked ~ .option {
     margin-top: 30%;
     border-radius: 10px;
     background: none;
-    color: white;
+    color: grey;
     font-weight: 600;
     border: 2px solid gray;
     cursor: pointer;
@@ -227,6 +229,7 @@ input[type=radio]:checked ~ .option {
 
 .back-to-home button:hover {
     background-color: rgb(143, 93, 93);
+    color: white;
 }
 
 @media(min-width : 300px) and (max-width : 350px) {

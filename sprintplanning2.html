@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <title>Sprint Planning Suggestions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('https://freedesignfile.com/upload/2017/01/Light-blue-tech-background-vector-04.jpg');
+            min-height: 100%;
+        }
+
+        /* Second image (Portfolio) */
+        .bgimg-2 {
+            background-image: url("/w3images/parallax2.jpg");
+            min-height: 400px;
+        }
+
+        /* Third image (Contact) */
+        .bgimg-3 {
+            background-image: url("/w3images/parallax3.jpg");
+            min-height: 400px;
+        }
+
+        .w3-wide {
+            letter-spacing: 10px;
+        }
+
+        .w3-hover-opacity {
+            cursor: pointer;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1600px) {
+
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
+                background-attachment: scroll;
+                min-height: 400px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Sprint Planning Suggestions </span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center"> Recommendations </h3>
+        <p class="w3-center"><em> We recommend that you have maximum 8 hour Sprint Planning sessions. However, this time highly depends on how well the tickers are groomed and how well your team understands each estimate. Here are more details on how to use Sprint Planning for your team. </em></p>
+
+        <ul class="w3-content">
+            <li>All important items should have importance ratings assigned to them, different importance ratings.</li>
+            <li>If you haven’t produced a decent sprint plan in 8 hours, you probably won’t manage it given another hour. The next option is actually quite OK, to schedule a new meeting next day
+            </li>
+            <li>Backlog Grooming vs Sprint Planning: Are There Any Similarities? (Kukhnavets, 2020)
+
+                <ul>
+                    <li>Both Scrum ceremonies strive to ensure that a team has a shared understanding of a particular body of work.</li>
+                    <li>They both seek to engage all attendees in the conversation.</li>
+                    <li>They both are more likely to have successful results if there is an experienced facilitator, who guides the conversation, without pushing the team in a particular direction.</li>
+                    <li>Backlog grooming and Sprint planning are more likely to have successful results if there is a person present who can act as the “Voice of the Customer” (Product Owner in Scrum).</li>
+                </ul>
+            </li>
+            <li>Keep in mind that poor estimations can lead tasks to failure: The tasks for the current sprint are selected by the development team based on their best estimations on the workload and their capabilities. If a task is poorly defined or estimated, they might not be able to complete it during the current sprint as planned in the sprint planning session (Airfocus, 2021).</li>
+            <li>Sprint planning requires some level of estimation. The team needs to define what can or cannot be done in the sprint: estimated effort vs capacity. Estimation is often confused with commitments. Estimates are by their very nature forecasts based on the knowledge at hand. Techniques such as story points or t-shirt sizing add value to the process by giving the team a different way of looking at the problem. They are not, however, magical tools that can find out the truth when there is none to be found. The more unknowns, the less likely the estimate will be correct (Airfocus, 2021).</li>
+            <li>Sprint planning should be constrained no more than two hours for each week of the sprint. So, for example, the sprint planning meeting for a two-week sprint would be no longer than two hours. This is called "timeboxing", or setting a maximum amount of time for the team to accomplish a task, in this case, planning the sprint. The scrum master is responsible for making sure the meeting happens the timebox is understood. If the team is happy before the timebox is finished, then the event is over. A timebox is a maximum time allowed; there is no minimum time allowed (Airfocus, 2021).</li>
+            <li>If you are reconsidering having Sprint Planning meetings, you should definitely have them as it is not an optional ceremony in Scrum. Additionally, here are some advantages of it (Airfocus, 2021)
+                <ul>
+                    <li>It provides a communication platform for the development team: During the sprint planning, the team members get the opportunity to identify their dependencies, capacity to set achievable goals and plan their tasks to achieve them during the current sprint.</li>
+                    <li>It helps to prioritize the deliverable: The product owner prioritizes the backlog with the most important items at the top. Then the scrum team selects the items from the prioritized backlog and breaks them down into smaller tasks. This way the most important features of the system will be delivered in early sprints.</li>
+                    <li>It avoids team burnout: The team members themselves select achievable goals for the current sprint based on their capabilities and estimations. This avoids a third party, such as the project manager, setting unachievable and/or unnecessarily stressful goal posts.</li>
+                </ul>
+            </li>
+            <li>Also, here is how to make your Grooming sessions more effective (Kukhnavets, 2020)
+
+                <ul>
+                    <li>Product grooming is critical in product management because it means keeping the backlog up to date and getting backlog items ready for upcoming sprints.</li>
+                    <li>Backlog grooming is often named pre-planning. The product owner and team representatives arrange it in the mid-sprint time. In this case, planning and refinement meetings alternate but happen on the same day each week. That provides an effective rhythm for the entire team.</li>
+                    <li>It removes the uncertainty and unknown facts of user stories increase the product’s efficiency.</li>
+                    <li>It assists to avoid rework in development and testing.</li>
+                    <li>Backlog grooming identifies the dependencies within the team and helps to foresee risks.</li>
+                    <li>Permanent grooming meetings save time for the development team for further discussion during the sprint cycle because they give clarity to developers and testers about the requirements.
+                    </li>
+                    <li>Successful grooming leads to effective sprint planning.
+                    </li>
+                    <li>The grooming process gives product owners, managers, or business analysts more chances to enhance the requirements with more information if it’s required.
+                    </li>
+                </ul>
+            </li>
+            <li>Sprint planning should be constrained no more than two hours for each week of the sprint. So, for example, the sprint planning meeting for a two-week sprint would be no longer than two hours. This is called "timeboxing", or setting a maximum amount of time for the team to accomplish a task, in this case, planning the sprint. The scrum master is responsible for making sure the meeting happens the timebox is understood. If the team is happy before the timebox is finished, then the event is over. A timebox is a maximum time allowed; there is no minimum time allowed (Airfocus, 2021).</li>
+
+        </ul>
+
+        <div class="w3-row">
+        </div>
+
+    </div>
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Contacts</h3>
+        <p class="w3-center"><em>We'd love your feedback!</em></p>
+        <div class="w3-col m8 w3-panel">
+            <div class="w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Minerva Univerity, San Francisco, CA<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> ara.mkhoyan@uni.minerva.edu<br>
+            </div>
+            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note theough my email:</p>
+        </div>
+        <div class="w3-content w3-container w3-padding-64 w3-center" id="contact">
+            <a href="ten_factors.html" class="w3-button w3-light-grey w3-center"><i class="fa fa-arrows-alt w3-margin-right"></i>10 Deciding Factors</a>
+
+            <a href="reference.html" class="w3-button w3-light-grey"><i class="fa fa-book w3-margin-right"></i>Reference</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="index.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Back to Home</a>
+        <p>Ara Mkhoyan - Minerva University</p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

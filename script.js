@@ -354,15 +354,15 @@ function handleEndGame() {
         
         // Logical check and recomendations for Daily Scrum
         if(values[0]=="4-6 people" || values[0]=="Less than 4 people"){
-            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum1.html" target="_blank">Click here!</a>';
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum1.html" target="_blank" style="color: white">Click here!</a>';
         } else if(values[0]=="7-10 people"){
-            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum2.html" target="_blank">Click here!</a>';
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum2.html" target="_blank" style="color: white">Click here!</a>';
         } else if(values[0]=="More than 10 people"){
-            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum3.html" target="_blank">Click here!</a>';    
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum3.html" target="_blank" style="color: white">Click here!</a>';    
         }else if(values[7]=="None" && (values[1]=="Expected performance (exactly what they commit to)" || values[1]=="Overperforming (do more than expected)" || values[1]=="Expected performance (exactly what they commit to)" )){
-            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum4.html" target="_blank">Click here!</a>';
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum4.html" target="_blank" style="color: white">Click here!</a>';
         } else if((values[1]=="High Performance" || values[1]=="Overperforming (do more than expected)") && (values[2]=="Regular collaboration happening between all" || values[2]=="High collaboration between SOME members") && values[3] == "Yes" && (values[17]=="Very Low" || values[17]=="Low" || values[17]=="None" || values[17]=="Normal") ){
-            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum5.html" target="_blank">Click here!</a>';
+            document.getElementById('daily-scrum').innerHTML = '<a href="dailyscrum5.html" target="_blank" style="color: white">Click here!</a>';
         } else {
             document.getElementById('daily-scrum').innerHTML = 'Keep What you are doing!';
         }
@@ -370,43 +370,38 @@ function handleEndGame() {
         
         // Logical check and recomendations for Sprint Planning
         if( (values[0]=="4-6 people" || values[0]=="Less than 4 people") && (values[5]=="Never, after writing" || values[5]== "In a constant time (e.g., once a week)" || values[5] =="As needed (no structure in place)") && (values[6]=="Once a Sprint during Planning" || values[6]== "Once a Sprint before Planning") && (values[8]=="Less than 2 hours" || values[8]== "2-4 hours" || values[8] == "5-6 hours" || values[8] =="None") && (values[11]=="Moderate (4-8 months)" || values[11]=="Long term (8-12 months)" || values[11]=="Indefinite") && (values[4]=="As needed" || values[4]=="Once new project is assigned" || values[4]=="In a constant time (e.g., once a week)") && (values[1]=="Underperforming (most of the time tasks are left unfinished)" || values[1]=="Low performance" || values[1]=="Varied a lot from Sprint to Sprint") && (values[18]=="Very Low" || values[18]=="Low" || values[18]=="None" || values[18]=="Normal")){
-            sprint_planning = "Keep it under 6 hours. Consider asking for more preparation and increase time schedule another call next day if time exceeds 8 hours.";
+            document.getElementById('sprint-planning').innerHTML = '<a href="sprintplanning1.html" target="_blank" style="color: white">Click here!</a>';
         } else if( (values[0]=="7-10 people" || values[0]=="More than 10 people") && (values[5]=="Never, after writing" || values[5]== "In a constant time (e.g., once a week)" || values[5] =="As needed (no structure in place)") && (values[6]=="Once a Sprint during Planning" || values[6]== "Once a Sprint before Planning") && (values[8]=="7-8 hours" || values[8]== "More than 8 hours" || values[8] =="None") && (values[11]=="Moderate (4-8 months)" || values[11]=="Long term (8-12 months)" || values[11]=="Indefinite") && (values[4]=="As needed" || values[4]=="Once new project is assigned" || values[4]=="In a constant time (e.g., once a week)") && (values[1]=="Underperforming (most of the time tasks are left unfinished)" || values[1]=="Low performance" || values[1]=="Varied a lot from Sprint to Sprint") && (values[18]=="Very Low" || values[18]=="Low" || values[18]=="None" || values[18]=="Normal")){
-            sprint_planning = "Keep it under 8 hours. Consider asking for more preparation and increase time to schedule another call the next day if time exceeds 8 hours.";
+            document.getElementById('sprint-planning').innerHTML = '<a href="sprintplanning2.html" target="_blank" style="color: white">Click here!</a>';
         } else {
-            sprint_planning = "Keep whatever you are doing!";
+            document.getElementById('sprint-planning').innerHTML = 'Keep What you are doing!';
         }
         
         
         // Logical check and recomendations for The Sprint
         if( (values[12]=="A lot (almost all story tickets)" || values[13]=="A lot (almost all story tickets)") && (values[11]=="Moderate (4-8 months)" || values[11]=="Short term (1-4 months)" || values[11]=="Small daily deliverable projects") && (values[9] != "4 weeks" && values[9] != "More than 4 weeks") &&  (values[4] != "Regularly (a lot)") && (values[5] != "In every grooming session before Story Points are estimated" && values[5] != "Before every grooming session before Story Points are estimated") && (values[6] == "Once a Sprint before Planning" || values[6] == "Once a Sprint during Planning")){
-            the_sprint = "1-week Sprints are good option for you";
+            document.getElementById('the-sprint').innerHTML = '<a href="sprint1.html" target="_blank" style="color: white">Click here!</a>';
         } else if( (values[12]!="A lot (almost all story tickets)" || values[13]!="A lot (almost all story tickets)") && (values[11]!="Moderate (4-8 months)" && values[11]!="Short term (1-4 months)" || values[11]!="Small daily deliverable projects") && (values[9] == "4 weeks" || values[9] == "More than 4 weeks") &&  (values[4] == "Regularly (a lot)") && (values[5] == "In every grooming session before Stroy Points are estimated" || values[5] == "Before every grooming session before Story Points are estimated") && (values[6] != "Once a Sprint before Planning" || values[6] != "Once a Sprint during Planning") ){
-            the_sprint = "3 or 4-week Sprints are good option for you.";
+            document.getElementById('the-sprint').innerHTML = '<a href="sprint3.html" target="_blank" style="color: white">Click here!</a>';
         } else {
-            the_sprint = "2-week Sprints are good option for you";
-        }
+            document.getElementById('the-sprint').innerHTML = '<a href="sprint2.html" target="_blank" style="color: white">Click here!</a>';        }
       
         // Logical check and recomendations for Sprint Review     
         if((values[0]=="Less than 4 people" || values[0]=="4-6 people") && (values[1]!="Underperforming (most of the time tasks are left unfinished)" && values[1]!="Low performance") && values[10]=="30 minutes" && (values[11]=="Small daily deliverable projects" || values[11]=="Short term (1-4 months)") && values[12]!="Low (almost never)" && values[13]!="Low (almost never)" && (values[19]=="Low" || values[19]=="Very Low")){
-            sprint_review = "Sprint Reviews are not effective, you can skip them.";
+            document.getElementById('sprint-review').innerHTML = '<a href="sprintreview1.html" target="_blank" style="color: white">Click here!</a>';
         } else if(values[14]=="Yes" && (values[10]=="60 minutes" || values[10]=="90 minutes" || values[10]=="120 minutes" ) && values[19]=="Normal" && (values[4]=="As needed" || values[4]=="In a constant time (e.g., once a week)" || values[4]=="Regularly (a lot)") && (values[5]!="Never, after writing" && values[5]!="As needed (no structure in place)") && (values[2]=="Regular collaboration happening between all" || values[2]=="High collaboration between SOME members" || values[2]=="Average collaboration (when needed)")){
-            sprint_review = "Keep the meetings informal.";
+            document.getElementById('sprint-review').innerHTML = '<a href="sprintreview3.html" target="_blank" style="color: white">Click here!</a>';
         } else if(values[16]=="No") {
-            sprint_review = "Make stakeholders  and Product Owner attend."
+            document.getElementById('sprint-review').innerHTML = '<a href="sprintreview2.html" target="_blank" style="color: white">Click here!</a>';
         }else {
-            sprint_review = "Keep what you are doing!";
+            document.getElementById('sprint-review').innerHTML = 'Keep What you are doing!';
         }
       
         // Logical check and recomendations for Retrospective 
         if((values[20]=="Very Low" || values[20]=="Low" || values[20]=="Normal") && values[12]=="Low (almost never)" && values[13] =="Low (almost never)" && (values[11]=="Small daily deliverable projects" || values[11]=="Short term (1-4 months)" || values[11]=="Moderate (4-8 months)") && vales[5]!=="Never" && (values[1]=="Overperforming (do more than expected)" || values[1]=="High Performance" || values[1]=="Expected performance (exactly what they commit to)")  ){
-            retrospective = "Retrospectives are NOT Necessary";
+            document.getElementById('retrospective').innerHTML = '<a href="retrospective1.html" target="_blank" style="color: white">Click here!</a>';
         } else {
-            retrospective = "Have them and keep 1 hour for 1-week Sprint ratio.";
-        }
-        
-        if (values[15]=="No"){
-            retrospective = retrospective + " Have 1-2 actionable items after meeting.";
+            document.getElementById('retrospective').innerHTML = '<a href="retrospective2.html" target="_blank" style="color: white">Click here!</a>';
         }
       
         
@@ -414,11 +409,11 @@ function handleEndGame() {
     
     //data to display to recomendations board
     document.getElementById('score-modal').style.display = "flex"
-    //document.getElementById('daily-scrum').innerHTML = daily_scrum
-    document.getElementById('sprint-planning').innerHTML = sprint_planning
-    document.getElementById('the-sprint').innerHTML = the_sprint
-    document.getElementById('sprint-review').innerHTML = sprint_review
-    document.getElementById('retrospective').innerHTML = retrospective
+//    document.getElementById('daily-scrum').innerHTML = daily_scrum
+//    document.getElementById('sprint-planning').innerHTML = sprint_planning
+//    document.getElementById('the-sprint').innerHTML = the_sprint
+//    document.getElementById('sprint-review').innerHTML = sprint_review
+//    document.getElementById('retrospective').innerHTML = retrospective
 }
 
 

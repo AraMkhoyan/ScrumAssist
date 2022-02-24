@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <title>The Sprint Suggestions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            color: #777;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('https://freedesignfile.com/upload/2017/01/Light-blue-tech-background-vector-04.jpg');
+            min-height: 100%;
+        }
+
+        /* Second image (Portfolio) */
+        .bgimg-2 {
+            background-image: url("/w3images/parallax2.jpg");
+            min-height: 400px;
+        }
+
+        /* Third image (Contact) */
+        .bgimg-3 {
+            background-image: url("/w3images/parallax3.jpg");
+            min-height: 400px;
+        }
+
+        .w3-wide {
+            letter-spacing: 10px;
+        }
+
+        .w3-hover-opacity {
+            cursor: pointer;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1600px) {
+
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
+                background-attachment: scroll;
+                min-height: 400px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">The Sprint Suggestions </span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center"> Recommendations </h3>
+        <p class="w3-center"><em> We recommend that you have 1-week Sprints due to your project length, uncertainties and risks that you face, and team productivity. Here are more details on how to use Sprint Planning for your team. </em></p>
+
+        <ul class="w3-content">
+            <li>Use of one-week sprints enables to reflect on your Scrum experience on a weekly basis and thus to quickly adjust your planning to how long different kinds of tasks usually took (Chase Felker, Radka Slamova, and Janet Davis).
+            </li>
+            <li>The negative consequence of doing one-week Sprints is that sometimes you might fail to present a working system at the end of the Sprint because some tasks required more than a week of work (Chase Felker, Radka Slamova, and Janet Davis).</li>
+            <li>According to scrum guidelines, a sprint shouldn’t last more than four weeks, and its ideal length would be two weeks.</li>
+            <li>Here are Pros of having one-week Spritns that may be useful to consider (Active Collab)
+                <ul>
+                    <li>Teams have better opportunities to make smaller changes.(Active Collab)</li>
+                    <li>Frequent sprint reviews allow product owners more feedback and frequent opportunities to update their thinking.(Active Collab)</li>
+                    <li>Slowdowns and impediments are highlighted more quickly since the team should complete all the features by the end of every sprint cycle.(Active Collab)</li>
+                    <li>Short sprints make planning easier.(Active Collab)</li>
+                    <li>It lets teams do a better job, boost visibility and understanding of processes within a sprint.(Active Collab)</li>
+                    <li>Since the Team has more, but shorter, retrospectives, they have more opportunities to make smaller changes. This also provides more opportunities to improve as a Team because…. (Mark Levison)</li>
+                    <li>More frequent Sprint Reviews give the Product Owner more feedback and more frequent opportunities to update their thinking with respect to the Product Backlog. This should largely eliminate the need for the Product Owner to ever ask for a change (e.g. new Story) during an in-progress Sprint (Mark Levison).</li>
+                    <li>Impediments and slowdowns are highlighted more quickly since the Team is expected to get feature(s) to Done by the end of every Sprint. This forces the Team to come to terms with things that are slowing them down (Mark Levison).</li>
+                    <li>Shorter cycles make planning easier, which increases focus and reduces the amount of “dark work.” (Mark Levison)</li>
+                    <li>Forces Teams to do a better job of slicing stories or features into smaller chunks. This increases visibility and understanding of progress within a Sprint (Mark Levison).</li>
+                </ul>
+            </li>
+            <li>Here are the Cons of having one-week Sprints that may be useful to consider (Active Collab)
+                <ul>
+                    <li>It is challenging to finish a product by the end of week two.(Active Collab)</li>
+                    <li>It can be stressful for many teams.(Active Collab)</li>
+                    <li>People are against sprint meetings for one-week sprints. But, they should increase gradually as the sprint length increases. (Active Collab)</li>
+                    <li>It’s harder to get to a finished product at the end of a one or two-week cycle. Caveat: this is true at first, however, most Teams are able to get the hang of it after three to four Sprints (Mark Levison).</li>
+                    <li>Working in one-week Sprints can be more stressful at first (Mark Levison).</li>
+                    <li>People say that Sprint meetings are too much overhead for a one-week Sprint. However, Sprint meetings should scale linearly with the length of a Sprint. So, a one-week Sprint will have two hours of Sprint Planning; a two-week Sprint will have four hours, and so on (Mark Levison).</li>
+                </ul>
+            </li>
+            <li>Reasons for having Short Sprint length (Mishkin Berteig)
+                <ul>
+                    <li>Scrum is about fast feedback – shorter Sprints mean faster feedback from the marketplace.</li>
+                    <li>Scrum is about continuous improvement – shorter Sprints give a team more opportunities to improve.</li>
+                    <li>High-performance teams need pressure to form – shorter Sprints provide pressure.</li>
+                    <li>If you have lots of interruptions that are disrupting your Sprint plans, shorten your Sprints. Match the average frequency of interruptions… and then just put them on the backlog.</li>
+                    <li>If you feel like you team starts out by working at a leisurely pace at the start of a Sprint and then “cramming” at the end of the Sprint, then shorter Sprints will force the team to work at a more even pace.</li>
+                    <li>Small failures are better than large failures, shorter Sprints help. Which is better: “we spent four weeks building the wrong things” OR “we spent one week building the wrong things”?</li>
+                    <li>If you are using Agile Engineering practices such as TDD, you should probably be able to do Sprints that are 1 week in length or less.</li>
+                    <li>Teams go through the stages of team development (forming, storming, norming and performing) in fewer Sprints if the Sprints are shorter. E.g. 5 Sprints if they’re 1 week long, but 20 Sprints if they’re 4 weeks long.</li>
+                    <li>If your team has trouble finishing all the work they plan for a Sprint, make the Sprint shorter. Shorter Sprints are easier to estimate! (This is counter-intuitive, but works like magic!)</li>
+                    <li>Experiment with extremely short Sprints to see what is possible: 1-day long, for example.</li>
+                    <li>If you are doing a project with a fixed release date/end date, then make sure you have at least 6 Sprints to allow for sufficient feedback cycles. More is generally better which means shorter Sprint lengths.</li>
+                    <li>If you are working on a product, consider Sprints that allow you to release minor updates more frequently than your main competitors. (Of course, you can release even more frequently than your Sprints too…)</li>
+                    <li>When a team is new, shorter Sprints help the team learn its capacity (also known as velocity) faster.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="w3-row">
+        </div>
+
+    </div>
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Contacts</h3>
+        <p class="w3-center"><em>We'd love your feedback!</em></p>
+        <div class="w3-col m8 w3-panel">
+            <div class="w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Minerva Univerity, San Francisco, CA<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> ara.mkhoyan@uni.minerva.edu<br>
+            </div>
+            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note theough my email:</p>
+        </div>
+        <div class="w3-content w3-container w3-padding-64 w3-center" id="contact">
+            <a href="ten_factors.html" class="w3-button w3-light-grey w3-center"><i class="fa fa-arrows-alt w3-margin-right"></i>10 Deciding Factors</a>
+
+            <a href="reference.html" class="w3-button w3-light-grey"><i class="fa fa-book w3-margin-right"></i>Reference</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="index.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Back to Home</a>
+        <p>Ara Mkhoyan - Minerva University</p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
