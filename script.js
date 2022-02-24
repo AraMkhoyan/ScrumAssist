@@ -393,7 +393,7 @@ function handleEndGame() {
         } else if(values[14]=="Yes" && (values[10]=="60 minutes" || values[10]=="90 minutes" || values[10]=="120 minutes" ) && values[19]=="Normal" && (values[4]=="As needed" || values[4]=="In a constant time (e.g., once a week)" || values[4]=="Regularly (a lot)") && (values[5]!="Never, after writing" && values[5]!="As needed (no structure in place)") && (values[2]=="Regular collaboration happening between all" || values[2]=="High collaboration between SOME members" || values[2]=="Average collaboration (when needed)")){
             sprint_review = "Keep the meetings informal.";
         } else if(values[16]=="No") {
-            sprint_review = "Make stakeholders  and Product Owner attend."
+            sprint_review = "Make stakeholders and Product Owner attend."
         }else {
             sprint_review = "Keep what you are doing!";
         }
@@ -403,10 +403,6 @@ function handleEndGame() {
             retrospective = "Retrospectives are NOT Necessary";
         } else {
             retrospective = "Have them and keep 1 hour for 1-week Sprint ratio.";
-        }
-        
-        if (values[15]=="No"){
-            retrospective = retrospective + " Have 1-2 actionable items after meeting.";
         }
       
         
